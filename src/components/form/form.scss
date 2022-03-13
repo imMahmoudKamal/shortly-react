@@ -1,0 +1,132 @@
+.form {
+  padding: 2rem 1rem;
+  background: var(--clr-primary-dark) url('/assets/bg-shorten-mobile.svg') top right / cover no-repeat;
+  border-radius: 0.5rem;
+  transform: translateY(-50%);
+  margin-bottom: -5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+
+  &__input {
+    --bg-clr: var(--clr-white);
+    border: none;
+    outline: none;
+    height: 2.5rem;
+    width: 100%;
+    background-color: var(--bg-clr);
+    border-radius: 0.25rem;
+    padding: 0 1rem;
+    font: inherit;
+    font-size: 0.8rem;
+    color: var(--clr-primary-dark);
+    border: 0.25rem solid var(--bg-clr);
+    transition: border 300ms ease;
+
+    &.err {
+      border-color: var(--clr-secondary);
+
+      &::placeholder {
+        color: var(--clr-secondary);
+        opacity: 0.5;
+      }
+    }
+
+    &::placeholder {
+      font-size: 0.8rem;
+      color: var(--clr-neutral-100);
+    }
+
+    &.err + span {
+      opacity: 1;
+    }
+  }
+
+  &__err {
+    position: absolute;
+    color: var(--clr-secondary);
+    font-size: 0.75rem;
+    top: 0.8rem;
+    font-style: italic;
+    opacity: 0;
+    transition: opacity 300ms ease;
+  }
+
+  &__submit {
+    height: 2.5rem;
+    border-radius: 0.25rem;
+    background-color: var(--clr-primary-cyan);
+    color: var(--clr-white);
+    font-weight: 700;
+    margin-top: 1rem;
+    transition: filter 100ms ease;
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(1.5);
+    }
+  }
+
+  &__loading {
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+    background: rgb(255 255 255 / 20%);
+    backdrop-filter: blur(2px);
+    display: none;
+
+    &.show {
+      display: flex;
+    }
+
+    &::after,
+    &::before {
+      content: '';
+      border: 0.4rem solid var(--clr-primary-dark);
+      border-radius: 100%;
+      display: block;
+    }
+
+    &::after {
+      animation: spin 1.5s infinite linear;
+      border-right-color: transparent;
+      height: 50px;
+      width: 50px;
+    }
+
+    &::before {
+      animation: spin 0.75s infinite linear reverse;
+      border-left-color: transparent;
+      height: 25px;
+      width: 25px;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  @media (min-width: 48rem) {
+    background-image: url('/assets/bg-shorten-desktop.svg');
+    padding: 3rem;
+    margin-bottom: -3rem;
+    flex-direction: row;
+    gap: 1.5rem;
+
+    &__input,
+    &__submit {
+      height: 3rem;
+      border-radius: 0.5rem;
+    }
+
+    &__submit {
+      margin-top: 0;
+      white-space: nowrap;
+      padding: 0 2rem;
+    }
+  }
+}

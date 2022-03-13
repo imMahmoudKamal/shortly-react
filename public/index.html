@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="URL Shortening App By Mahmoud Kamal" />
+    <title>Shortly | Mahmoud Kamal</title>
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.svg" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.svg" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker
+            .register('./serviceWorker.js')
+            .then((reg) => {})
+            .catch((error) => console.error(error));
+        });
+      }
+    </script>
+  </body>
+</html>

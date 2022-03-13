@@ -1,0 +1,14 @@
+$font-size: 20px;
+
+// colors
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-primary-cyan: hsl(180, 66%, 49%); // Cyan
+  --clr-primary-dark: hsl(257, 27%, 26%); // Dark Violet
+  --clr-secondary: hsl(0, 87%, 67%); // Red
+  --clr-neutral-50: hsl(230, 25%, 95%); // bg
+  --clr-neutral-100: hsl(0, 0%, 75%); // Gray
+  --clr-neutral-200: hsl(257, 7%, 63%); // Grayish Violet
+  --clr-neutral-700: hsl(255, 11%, 22%); // Very Dark Blue
+  --clr-neutral-800: hsl(260, 8%, 14%); // Very Dark Violet
+}

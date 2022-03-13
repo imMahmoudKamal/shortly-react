@@ -1,0 +1,72 @@
+.short-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--clr-white);
+  border-radius: 0.5rem;
+  padding: 1rem 0;
+  margin-top: 1.5rem;
+
+  &__after,
+  &__before {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &__after {
+    padding: 0 1rem 0.5rem;
+    border-bottom: 1px solid var(--clr-neutral-100);
+  }
+
+  &__before {
+    padding: 0.6rem 1rem;
+    color: var(--clr-primary-cyan);
+  }
+
+  &__copy {
+    background-color: var(--clr-primary-cyan);
+    color: var(--clr-white);
+    width: calc(100% - 2rem);
+    margin: 0 auto;
+    height: 2.5rem;
+    font-weight: 700;
+    border-radius: 0.25rem;
+    transition: background-color 300ms ease;
+    cursor: pointer;
+    transition: filter 100ms ease;
+
+    &.copied {
+      background-color: var(--clr-primary-dark);
+    }
+
+    &:hover {
+      filter: brightness(1.5);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    flex-direction: row;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1.5rem;
+
+    &__after,
+    &__before {
+      border: none;
+      padding: 0;
+    }
+
+    &__before {
+      text-align: right;
+    }
+
+    &__copy {
+      max-width: 5rem;
+      height: 2rem;
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+    }
+  }
+}

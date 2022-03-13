@@ -1,0 +1,56 @@
+@import './base/typography'; // google font
+@import './base/reset'; // reset
+@import './abstracts/variables'; // variables
+
+:root {
+  font-size: $font-size;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.main {
+  background-color: var(--clr-neutral-50);
+}
+
+.container {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 48rem) {
+    max-width: 70rem;
+  }
+}
+
+.button__cta {
+  background-color: var(--clr-primary-cyan);
+  color: var(--clr-white);
+  display: block;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.active-link {
+  color: var(--clr-primary-cyan) !important;
+}
+
+.visually-hidden {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+a:hover,
+a:active {
+  color: initial;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  appearance: none;
+}
+
+ul {
+  list-style: none;
+}

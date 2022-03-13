@@ -1,0 +1,37 @@
+.about {
+  padding: 2rem 0;
+
+  &__heading {
+    font-size: 1.25rem;
+    text-align: center;
+    color: var(--clr-primary-dark);
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.25;
+    color: var(--clr-neutral-800);
+    opacity: 0.8;
+    margin-bottom: 2rem;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    &__link {
+      display: block;
+      width: 2rem;
+      height: 2rem;
+      fill: var(--clr-primary-dark);
+      transition: fill 150ms ease;
+
+      &:hover {
+        fill: var(--clr-primary-cyan);
+      }
+    }
+  }
+}
