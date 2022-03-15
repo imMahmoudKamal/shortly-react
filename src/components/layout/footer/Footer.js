@@ -67,7 +67,7 @@ export default function Footer() {
           })}
         </ul>
 
-        <p className="footer__copy">Made with ❤️ by Mahmoud Kamal © 2022</p>
+        <p className="footer__copy">Made with ❤️ by Mahmoud Kamal © {new Date().getFullYear()}</p>
       </div>
     </footer>
   );

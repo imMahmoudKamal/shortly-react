@@ -1,19 +1,14 @@
 import { useState } from 'react';
 import './card.scss';
+import { copyTextToClibpoard } from '../../utils/Utils';
 
 export default function Card({ link }) {
   const [copyButtonText, setCopyButtonText] = useState('Copy');
 
   function copyLink() {
-    const textArea = document.createElement('textarea');
-
-    document.body.appendChild(textArea);
-    textArea.value = link.shortLink;
-    textArea.select();
-    document.execCommand('copy');
-    document.body.removeChild(textArea);
-
-    setCopyButtonText('Copied!');
+    if (copyTextToClibpoard(link.shortLink)) {
+      setCopyButtonText('Copied!');
+    }
   }
 
   return (

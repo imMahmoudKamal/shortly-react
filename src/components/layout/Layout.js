@@ -7,6 +7,7 @@ import { useLocation } from 'react-router-dom';
 export default function Layout({ children }) {
   const location = useLocation();
 
+  // scroll to top smoothly
   useEffect(() => {
     window.scrollTo({
       top: 0,

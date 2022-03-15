@@ -1,14 +1,13 @@
 import './about.scss';
 import { ReactComponent as GitIcon } from '../../assets/icon-github.svg';
 import { ReactComponent as LinkedinIcon } from '../../assets/icon-linkedin.svg';
-import { Link } from 'react-router-dom';
 
 export default function About() {
   return (
     <section aria-label="About" className="about">
       <div className="container">
         <h2 className="about__heading">About Me!</h2>
-        <p className="about__text">Created by Mahmoud Kamal you can follow me </p>
+        <p className="about__text">Created by Mahmoud Kamal you can follow me</p>
 
         <ul className="about__links">
           <li>
